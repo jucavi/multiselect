@@ -1,0 +1,46 @@
+#emails_hidden {
+    display:none;
+}
+
+.tags-container {
+    height:2.5em;
+}
+
+.tag-container {
+    height: 100%;
+    cursor: pointer;
+}
+
+
+#search-wrapper {
+    position: relative;
+    flex: 1;
+    height: 100%;
+}
+
+#email-input,
+#complete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    /* adjust */
+    padding: .19em;
+}
+
+#email-input:focus,
+#complete:focus{
+    outline: none;
+    border-color: #aaa;
+}
+
+#email-input {
+    color: rgb(8, 8, 8);
+    background-color: transparent;
+}
+
+#complete {
+    color: rgb(199, 194, 194);
+}
