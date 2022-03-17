@@ -1,8 +1,7 @@
-const emailsInput = document.querySelector('#maillist');
-const tagContainer = document.querySelector('.tag-container');
-const input = document.querySelector('#email-input');
-const hiddenElemetsDiv = document.querySelector('#emails_hidden');
+const hiddenElemetsDiv = document.querySelector('#hidden_elements');
 // { elements: [list of hidden elements] }
+const tagContainer = document.querySelector('.tag_container');
+const input = document.querySelector('#label_input');
 let tags = [];
 
 const elements = (window.onload = function (hiddenElementsDiv) {
@@ -28,13 +27,13 @@ function createTags(label) {
   const div = document.createElement('div');
   div.setAttribute(
     'class',
-    'tag border border-danger py-1 px-2 me-1 rounded bg-secondary'
+    'tag border my-1 me-1'
   );
   const span = document.createElement('span');
-  span.setAttribute('class', 'list__value');
+  // span.setAttribute('class', 'label_value');
   span.innerHTML = label;
   const closeBtn = document.createElement('i');
-  closeBtn.setAttribute('class', 'fa-solid fa-xmark ps-1');
+  closeBtn.setAttribute('class', 'fa-solid fa-xmark ps-3');
   closeBtn.setAttribute('tag-data', label);
 
   div.appendChild(span);
@@ -64,7 +63,7 @@ input.addEventListener('keydown', function (e) {
 
 let find = false;
 input.addEventListener('keyup', function (e) {
-  const completeDiv = document.querySelector('#complete');
+  const completeDiv = document.querySelector('#text_suggest');
   match = bestMatch(elements, input.value);
 
   completeDiv.innerText = match[0] ? match[0] : '';

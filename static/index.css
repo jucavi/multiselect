@@ -1,16 +1,21 @@
-#emails_hidden {
+#hidden_elements {
     display:none;
 }
 
-.tags-container {
+.tags_container {
     height:2.5em;
 }
 
-.tag-container {
+.tag_container {
     height: 100%;
     cursor: pointer;
 }
 
+.tag {
+    background-color: rgb(185, 202, 218);
+    border-radius: 1em;
+    padding: 0.1em 0.4em;
+}
 
 #search-wrapper {
     position: relative;
@@ -18,29 +23,22 @@
     height: 100%;
 }
 
-#email-input,
-#complete{
+#label_input {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
     border: none;
-    /* adjust */
-    padding: .19em;
+    background-color: transparent;
+    padding: 0;
 }
 
-#email-input:focus,
-#complete:focus{
+#label_input:focus {
     outline: none;
     border-color: #aaa;
 }
 
-#email-input {
-    color: rgb(8, 8, 8);
-    background-color: transparent;
-}
-
-#complete {
+#text_suggest {
     color: rgb(199, 194, 194);
 }
